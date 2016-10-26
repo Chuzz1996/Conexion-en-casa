@@ -1,18 +1,19 @@
+import puntos
 public class Kruskal{
 	static int[] pset, rank;
 	static List<Edge> edgeList;
 	static int N;
 	static String[] codes;
 	
-	static int find(int i) {
+	public static int find(int i) {
 		return pset[i] == i ? i : (pset[i] = find(pset[i]));
 	}
 	
-	static boolean isSameSet(int i, int j) {
+	public static boolean isSameSet(int i, int j) {
 		return find(i) == find(j);
 	}
 	
-	static void merge(int i, int j) {
+	public static void merge(int i, int j) {
 		int pi = find(i);
 		int pj = find(j);
 		if (rank[pi] > rank[pj])
@@ -34,7 +35,7 @@ public class Kruskal{
 		}
 	}
 	
-	static int kruskal() {
+	public static int sol() {
 		pset = new int[N];
 		rank = new int[N];
 
@@ -54,13 +55,12 @@ public class Kruskal{
 		}
 		return cost;
 	}
-	public static void main(String[] args) throws IOException {
+	public kruskal(){
     	/*
         * Inicializa el grafo
         */
-    	edgeList = new ArrayList<Edge>();
-        //Forma de agregar los elementos
-        edgeList.add(new Edge(u, v, costos);
-		    }
+	    edgeList = new ArrayList<Edge>();
+		edgeList.add(new Edge(u, v, costos);
 	}
+}
 }

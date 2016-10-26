@@ -1,5 +1,11 @@
-def convex_hull(points): 
- """Computes the convex hull of a set of 2D points.
+from sys import stdin
+import math
+class Alcance(object):
+ def __init__(self):
+  
+  
+  def convex_hull(self,points): 
+   """Computes the convex hull of a set of 2D points.
 
     Input: an iterable sequence of (x, y) pairs representing the points.
     Output: a list of vertices of the convex hull in counter-clockwise order,
@@ -13,12 +19,12 @@ def convex_hull(points):
 
     # Boring case: no points or a single point, possibly repeated multiple times.
     if len(points) <= 1:
-        return points
+     return points
 
     # 2D cross product of OA and OB vectors, i.e. z-component of their 3D cross product.
     # Returns a positive value, if OAB makes a counter-clockwise turn,
     # negative for clockwise turn, and zero if the points are collinear.
-    def cross(o, a, b):
+    def cross(self,o, a, b):
         return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
 
     # Build lower hull 
